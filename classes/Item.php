@@ -11,20 +11,16 @@ class Item extends Warehouse {
     public $category;
     public $quantity;
 
-
-    //Constructor
-    public function __construct($_description, $_price, $_cod_item,$_category, $_quantity)
-    {
+    //constructor
+    public function __construct($_ward, $_lane, $_number,$_description, $_price, $_cod_item, $_category, $_quantity) {
+        parent::__construt($_ward,$_lane,$_number);
         $this->description = $_description;
         $this->price = $_price;
         $this->cod_item = $_cod_item;
         $this->category = $_category;
         $this->quantity = $_quantity;
     }
-
-    //Methods
-    public function printItem() {
-        return $this->description . ' ' . $this->cod_item;
-    }
 }
+$item1 = new Item('Abbigliamento','A','1','t-SHIRT',20,'A001','Maglietta',100);
+var_dump($item1);
 ?>
