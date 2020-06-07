@@ -15,5 +15,13 @@ class Warehouse {
         $this->lane = $_lane;
         $this->number = $_number;
     }
+
+    public function showWarehouse () {
+        echo "<h1> Ward: $this->ward </h1>";
+        echo "<h2> Lane: $this->lane</h2>";
+        echo "<h3> Number: $this->number</h3>";
+    }
 }
+$warehouse1 = new Warehouse ('ABBIGLIAMENTO', '1' ,'1A');
+$warehouse2 = new Warehouse ('ATTREZZATURA', '2','2B');
 ?>

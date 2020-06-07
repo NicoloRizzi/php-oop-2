@@ -20,7 +20,9 @@ class Item extends Warehouse {
         $this->category = $_category;
         $this->quantity = $_quantity;
     }
+    public function showItem () {
+        return $this->description . ' ' . $this->cod_item . ' ' . $this->price;
+    }
 }
-$item1 = new Item('Abbigliamento','A','1','t-SHIRT',20,'A001','Maglietta',100);
-var_dump($item1);
+
 ?>
